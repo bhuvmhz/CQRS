@@ -9,7 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\CQRSPlay\Services\ServiceDomains.csproj" />
+    <ProjectReference Include="..\ServiceDomains\ServiceDomains.csproj" />
   </ItemGroup>
 
 
