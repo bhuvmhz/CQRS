@@ -5,8 +5,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System.Reflection;
-using ServiceDomains.CarsDomain.Commands;
-using ServiceDomains.CarsDomain.Queries;
+using CarsScenarios.CarsDomain.Queries;
+using CarsScenarios.CarsDomain.Commands;
 
 namespace Kantipur.Api
 {
@@ -21,8 +21,8 @@ namespace Kantipur.Api
 
         private readonly Assembly[] _assemblies =
         {
-            typeof(GetAllCarsQuery).Assembly,
-            typeof(CreateCarCommand).Assembly
+            typeof(GetCarsRequest).Assembly,
+            typeof(CreateCarHandler).Assembly
         };
 
         public void ConfigureServices(IServiceCollection services)

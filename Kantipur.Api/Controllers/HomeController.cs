@@ -3,8 +3,8 @@ using Microsoft.AspNetCore.Mvc;
 using Models;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using ServiceDomains.CarsDomain.Commands;
-using ServiceDomains.CarsDomain.Queries;
+using CarsScenarios.CarsDomain.Commands;
+using CarsScenarios.CarsDomain.Queries;
 
 namespace Kantipur.Api.Controllers
 {
@@ -20,13 +20,13 @@ namespace Kantipur.Api.Controllers
         }
 
         [HttpGet]
-        public async Task<IEnumerable<Car>> GetAllCars([FromRoute] GetAllCarsQuery query)
+        public async Task<IEnumerable<Car>> GetCars([FromQuery] GetCarsRequest query)
         {
             return await _mediator.Send(query).ConfigureAwait(false);
         }
 
         [HttpPost]
-        public async Task<string> CreateCar([FromBody] CreateCarCommand command)
+        public async Task<Car> CreateCar([FromBody] CreateCarHandler command)
         {
             return await _mediator.Send(command).ConfigureAwait(false);
         }
