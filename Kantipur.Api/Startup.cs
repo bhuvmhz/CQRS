@@ -7,6 +7,13 @@ using Microsoft.Extensions.Hosting;
 using System.Reflection;
 using CarsScenarios.CarsDomain.Queries;
 using CarsScenarios.CarsDomain.Commands;
+using System.Data.SqlClient;
+using AutoMapper;
+using Kantipur.Persistence.DataContexts;
+using Kantipur.Persistence.Repositories.IRepository;
+using Models.Mappers;
+using Kantipur.Persistence.Repositories;
+using Microsoft.EntityFrameworkCore;
 
 namespace Kantipur.Api
 {
@@ -27,6 +34,22 @@ namespace Kantipur.Api
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors();
+
+            var builder = new SqlConnectionStringBuilder(Configuration["KantipurApp:ConnectionStrings:AzureParulDb"])
+            {
+                Password = Configuration["KantipurApp:ConnectionStrings:AzureParulDbPassword"]
+            };
+            services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(builder.ConnectionString));
+
+            var mappingConfig = new MapperConfiguration(mc =>
+            {
+                mc.AddProfile(new ContainerMappings());
+            });
+            IMapper mapper = mappingConfig.CreateMapper();
+            services.AddSingleton(mapper);
+
+            services.AddScoped<IContainerRepository, ContainerRepository>();
             services.AddMediatR(_assemblies);
             services.AddControllers();
         }

@@ -6,5 +6,9 @@ using System.Text;
 
 namespace CarsScenarios.CarsDomain.Commands
 {
-    public class CreateCarHandler : IRequest<Car> { }
+    public class CreateCarHandler : IRequest<Car>
+    {
+        public string PlateNo { get; set; }
+        public string Model { get; set; }
+    }
 }

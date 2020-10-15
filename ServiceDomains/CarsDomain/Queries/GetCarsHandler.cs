@@ -42,7 +42,7 @@ namespace CarsScenarios.CarsDomain.Queries
 
             await Task.Delay(500, cancellationToken).ConfigureAwait(false);
 
-            return request.PlateNo == null ? cars : cars.FindAll(x => x.PlateNo == request.PlateNo).ToList();
+            return request.PlateNo == null ? cars : cars.FindAll(x => x.PlateNo.ToLower() == request.PlateNo.ToLower()).ToList();
         }
     }
 }

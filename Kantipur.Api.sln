@@ -13,7 +13,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CarsDomain", "CarsDomain", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{86E9D9E5-4F7E-4BA6-B078-DBE013D0AC2C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarsDomainTests", "CarsDomainTests\CarsDomainTests.csproj", "{6048EC51-1498-4B71-A4A2-79B32526A474}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarsDomainTests", "CarsDomainTests\CarsDomainTests.csproj", "{6048EC51-1498-4B71-A4A2-79B32526A474}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistence", "Kantipur.Persist\Persistence.csproj", "{BBE17896-13BC-47D8-BE3B-E0512B37B457}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,6 +39,10 @@ Global
 		{6048EC51-1498-4B71-A4A2-79B32526A474}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6048EC51-1498-4B71-A4A2-79B32526A474}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6048EC51-1498-4B71-A4A2-79B32526A474}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBE17896-13BC-47D8-BE3B-E0512B37B457}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBE17896-13BC-47D8-BE3B-E0512B37B457}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBE17896-13BC-47D8-BE3B-E0512B37B457}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBE17896-13BC-47D8-BE3B-E0512B37B457}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
