@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
-using MediatR;
+﻿using MediatR;
 using Models;
+using System.Collections.Generic;
 
-namespace CarsScenarios.CarsDomain.Queries
+namespace Scenarios.CarScenarios
 {
     public class GetCarsRequest : IRequest<IEnumerable<Car>>
     {

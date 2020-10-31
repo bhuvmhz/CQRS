@@ -7,15 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models", "Models\Models.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kantipur.Api", "Kantipur.Api\Kantipur.Api.csproj", "{1CCB3DC6-0BFD-457A-ACFE-903BA17CEC4C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarsScenarios", "ServiceDomains\CarsScenarios.csproj", "{85224979-B955-49D3-BD06-64E7E833FA41}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scenarios", "ServiceDomains\Scenarios.csproj", "{85224979-B955-49D3-BD06-64E7E833FA41}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CarsDomain", "CarsDomain", "{67822999-5059-4ECE-A54E-27C81B98E839}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DomainTests", "CarsDomainTests\DomainTests.csproj", "{6048EC51-1498-4B71-A4A2-79B32526A474}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{86E9D9E5-4F7E-4BA6-B078-DBE013D0AC2C}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarsDomainTests", "CarsDomainTests\CarsDomainTests.csproj", "{6048EC51-1498-4B71-A4A2-79B32526A474}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistence", "Kantipur.Persist\Persistence.csproj", "{BBE17896-13BC-47D8-BE3B-E0512B37B457}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Persistence", "Kantipur.Persist\Persistence.csproj", "{BBE17896-13BC-47D8-BE3B-E0512B37B457}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -46,11 +42,6 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{85224979-B955-49D3-BD06-64E7E833FA41} = {67822999-5059-4ECE-A54E-27C81B98E839}
-		{86E9D9E5-4F7E-4BA6-B078-DBE013D0AC2C} = {67822999-5059-4ECE-A54E-27C81B98E839}
-		{6048EC51-1498-4B71-A4A2-79B32526A474} = {86E9D9E5-4F7E-4BA6-B078-DBE013D0AC2C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B3F8165A-317D-4829-A55A-43DAB68085F7}

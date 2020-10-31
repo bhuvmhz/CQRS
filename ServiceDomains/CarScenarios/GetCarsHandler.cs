@@ -1,17 +1,17 @@
-﻿using System.Collections.Generic;
+﻿using MediatR;
+using Models;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using MediatR;
-using Models;
 
-namespace CarsScenarios.CarsDomain.Queries
+namespace Scenarios.CarScenarios
 {
     public class GetCarsHandler : IRequestHandler<GetCarsRequest, IEnumerable<Car>>
     {
         public GetCarsHandler()
         {
-            
+
         }
 
         public async Task<IEnumerable<Car>> Handle(GetCarsRequest request, CancellationToken cancellationToken)

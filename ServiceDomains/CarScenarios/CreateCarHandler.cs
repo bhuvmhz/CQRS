@@ -1,10 +1,9 @@
 ﻿using MediatR;
-using System;
+using Models;
 using System.Threading;
 using System.Threading.Tasks;
-using Models;
 
-namespace CarsScenarios.CarsDomain.Commands
+namespace Scenarios.CarScenarios
 {
     public class CreateCarCommandHandler : IRequestHandler<CreateCarHandler, Car>
     {

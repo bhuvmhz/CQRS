@@ -5,8 +5,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System.Reflection;
-using CarsScenarios.CarsDomain.Queries;
-using CarsScenarios.CarsDomain.Commands;
 using System.Data.SqlClient;
 using AutoMapper;
 using Kantipur.Persistence.DataContexts;
@@ -14,6 +12,9 @@ using Kantipur.Persistence.Repositories.IRepository;
 using Models.Mappers;
 using Kantipur.Persistence.Repositories;
 using Microsoft.EntityFrameworkCore;
+using System;
+using Scenarios.CarScenarios;
+using Scenarios.ContainerScenarios;
 
 namespace Kantipur.Api
 {
@@ -29,12 +30,15 @@ namespace Kantipur.Api
         private readonly Assembly[] _assemblies =
         {
             typeof(GetCarsRequest).Assembly,
-            typeof(CreateCarHandler).Assembly
+            typeof(CreateCarHandler).Assembly,
+            typeof(GetContainerRequest).Assembly,
+            typeof(CreateContainerHandler).Assembly
         };
 
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddCors();
+            services.AddSwaggerDocument(configure => configure.Title = "Kantipur API");
 
             var builder = new SqlConnectionStringBuilder(Configuration["KantipurApp:ConnectionStrings:AzureParulDb"])
             {
@@ -62,6 +66,9 @@ namespace Kantipur.Api
             }
 
             app.UseHttpsRedirection();
+
+            app.UseOpenApi();
+            app.UseSwaggerUi3();
 
             app.UseRouting();
 
