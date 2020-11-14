@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Mappers\Mappers.csproj" />
     <ProjectReference Include="..\ServiceDomains\Scenarios.csproj" />
   </ItemGroup>
 

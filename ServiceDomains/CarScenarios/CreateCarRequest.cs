@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using Documents.CarDocuments;
+using MediatR;
 using Models;
 
 namespace Scenarios.CarScenarios

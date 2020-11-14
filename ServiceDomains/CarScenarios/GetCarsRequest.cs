@@ -1,5 +1,5 @@
-﻿using MediatR;
-using Models;
+﻿using Documents.CarDocuments;
+using MediatR;
 using System.Collections.Generic;
 
 namespace Scenarios.CarScenarios

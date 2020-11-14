@@ -1,4 +1,6 @@
-﻿namespace Models
+﻿using Models;
+
+namespace Documents.CarDocuments
 {
     public class Car
     {

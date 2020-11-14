@@ -1,10 +1,8 @@
 ﻿using AutoMapper;
+using Documents.ContainerDocuments;
 using Models.Dtos;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace Models.Mappers
+namespace Mappers.Containers
 {
     public class ContainerMappings : Profile
     {

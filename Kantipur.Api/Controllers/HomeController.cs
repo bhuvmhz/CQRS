@@ -4,6 +4,7 @@ using Models;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Scenarios.CarScenarios;
+using Documents.CarDocuments;
 
 namespace Kantipur.Api.Controllers
 {
