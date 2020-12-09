@@ -9,7 +9,7 @@ namespace Documents.CarDocuments
     {
         public CarValidator()
         {
-            RuleFor(_ => _.PlateNo).Equal("LYE801").WithSeverity(Severity.Warning);
+            RuleFor(_ => _.PlateNo.Length).InclusiveBetween(3, 6).WithSeverity(Severity.Warning);
         }
     }
 }

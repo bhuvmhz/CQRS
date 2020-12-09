@@ -13,11 +13,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DomainTests", "CarsDomainTe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Persistence", "Kantipur.Persist\Persistence.csproj", "{BBE17896-13BC-47D8-BE3B-E0512B37B457}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Documents", "Documents\Documents.csproj", "{22A10922-D796-4AF9-BEA6-9D8755973E58}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Documents", "Documents\Documents.csproj", "{22A10922-D796-4AF9-BEA6-9D8755973E58}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mappers", "Mappers\Mappers.csproj", "{66760F39-4EFB-4268-AB2A-3BC95DDC0C38}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mappers", "Mappers\Mappers.csproj", "{66760F39-4EFB-4268-AB2A-3BC95DDC0C38}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extensions", "Extensions\Extensions.csproj", "{6706267A-965E-4520-9CF7-C709B8F9073E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Extensions", "Extensions\Extensions.csproj", "{6706267A-965E-4520-9CF7-C709B8F9073E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared.csproj", "{DDAF2177-A910-439D-B85D-5EDBCEF60E9D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{6706267A-965E-4520-9CF7-C709B8F9073E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6706267A-965E-4520-9CF7-C709B8F9073E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6706267A-965E-4520-9CF7-C709B8F9073E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDAF2177-A910-439D-B85D-5EDBCEF60E9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDAF2177-A910-439D-B85D-5EDBCEF60E9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDAF2177-A910-439D-B85D-5EDBCEF60E9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDAF2177-A910-439D-B85D-5EDBCEF60E9D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -2,16 +2,18 @@
 using Shouldly;
 using Xunit;
 
-namespace DomainTests
+namespace Shared
 {
     public class CarValidationUnitTests
     {
-        [Fact]
-        public void ValidateCar()
+        [Theory]
+        [CsvData(@"TestData.csv")]
+        public void Test(string plateNo, bool isValid)
         {
-            var cv = new CarValidator();
-            var result = cv.Validate(new Car() { PlateNo = "LYE801" });
-            result.IsValid.ShouldBe(true);
+            var car = new Car() { PlateNo = plateNo };
+            var carValidator = new CarValidator();
+            var validationResults = carValidator.Validate(car);
+            validationResults.IsValid.ShouldBe(isValid);
         }
     }
 }
